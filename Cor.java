@@ -11,14 +11,14 @@ public abstract class Cor
     }
      
     private void setCorUm(int corUm) {
-	    this.corUm = corUm;
+	 this.corUm = corUm;
     }
 
     private void setCorDois(int corDois) {
-	    this.corDois = corDois;
+	 this.corDois = corDois;
     }
     
     private void setCorTres(int corTres) {
-	    this.corTres = corTres;
+	 this.corTres = corTres;
     }
 }
