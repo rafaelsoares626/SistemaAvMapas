@@ -1,19 +1,19 @@
-public class Rgb extends Cor
-{
+public class Rgb extends Cor{
+    
     public Rgb(int red, int green, int blue) {       
         super(red, green, blue);        
     }
     
     public int getRed() {
-        return this.corUm;
+        return this.uplaUm;
     }
 
     public int getGreen() {
-        return this.corDois;
+        return this.uplaDois;
     }
 
     public int getBlue() {
-        return this.corTres;
+        return this.uplaTres;
     }
     
     public int getLuminosidade() {

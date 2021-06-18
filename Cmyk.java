@@ -1,5 +1,4 @@
-public class Cmyk extends Cor
-{
+public class Cmyk extends Cor{
     private int black;
     
     public Cmyk(int cyan, int magenta, int yellow, int black) {       
@@ -8,19 +7,19 @@ public class Cmyk extends Cor
     }
     
     public int getCyan() {
-        return this.corUm;
+        return this.uplaUm;
     }
 
     public int getMagenta() {
-        return this.corDois;
+        return this.uplaDois;
     }
 
     public int getYellow() {
-        return this.corTres;
+        return this.uplaTres;
     }
     
     private void setBlack(int black) {
-	this.black = black;
+        this.black = black;
     }
     
     public int getBlack() {

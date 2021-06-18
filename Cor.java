@@ -1,24 +1,24 @@
-public abstract class Cor
-{
-    protected int corUm;    
-    protected int corDois;    
-    protected int corTres;    
+public abstract class Cor{
     
-    public Cor(int corUm, int corDois, int corTres) {
-        this.setCorUm(corUm);
-        this.setCorDois(corDois);
-        this.setCorTres(corTres);
+    protected int uplaUm;    
+    protected int uplaDois;    
+    protected int uplaTres;    
+    
+    public Cor(int uplaUm, int uplaDois, int uplaTres) {
+        this.setUplaUm(uplaUm);
+        this.setUplaDois(uplaDois);
+        this.setUplaTres(uplaTres);
     }
      
-    private void setCorUm(int corUm) {
-	    this.corUm = corUm;
+    private void setUplaUm(int uplaUm) {
+        this.uplaUm = uplaUm;
     }
 
-    private void setCorDois(int corDois) {
-	    this.corDois = corDois;
+    private void setUplaDois(int uplaDois) {
+        this.uplaDois = uplaDois;
     }
     
-    private void setCorTres(int corTres) {
-	    this.corTres = corTres;
+    private void setUplaTres(int uplaTres) {
+        this.uplaTres = uplaTres;
     }
 }
