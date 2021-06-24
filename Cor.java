@@ -10,15 +10,22 @@ public abstract class Cor{
         this.setUplaTres(uplaTres);
     }
      
+    public abstract int tratarUplaUm(int uplaUm);
+    public abstract int tratarUplaDois(int uplaDois);
+    public abstract int tratarUplaTres(int uplatres);
+    
     private void setUplaUm(int uplaUm) {
+        uplaUm = tratarUplaUm(uplaUm);
         this.uplaUm = uplaUm;
     }
 
     private void setUplaDois(int uplaDois) {
+        uplaDois = tratarUplaDois(uplaDois);
         this.uplaDois = uplaDois;
     }
     
     private void setUplaTres(int uplaTres) {
+        uplaTres = tratarUplaTres(uplaTres);
         this.uplaTres = uplaTres;
     }
 }
