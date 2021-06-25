@@ -1,8 +1,8 @@
-public class Rgb extends Cor{
+public class CorRGB extends Cor{
     
-    //public static final Rgb BRANCA = new Rgb(255,255,255);
+    public static final CorRGB BRANCA = new CorRGB(255,255,255);
     
-    public Rgb(int red, int green, int blue) {       
+    public CorRGB(int red, int green, int blue) {       
         super(red, green, blue);        
     }
     
@@ -52,7 +52,7 @@ public class Rgb extends Cor{
         return (int)(this.getRed() * 0.3 +this.getGreen() * 0.59 + this.getBlue() * 0.11);
     }
     
-    @Override
+    //@Override
     public String toString() {
         return "Red: " + this.getRed() + "\nGreen: " + this.getGreen() + "\nBlue: " + this.getBlue() + "\nLuminosidade: " + this.getLuminosidade();
     }

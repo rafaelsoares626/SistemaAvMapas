@@ -13,6 +13,7 @@ public abstract class Cor{
     public abstract int tratarUplaUm(int uplaUm);
     public abstract int tratarUplaDois(int uplaDois);
     public abstract int tratarUplaTres(int uplatres);
+    public abstract int getLuminosidade();
     
     private void setUplaUm(int uplaUm) {
         uplaUm = tratarUplaUm(uplaUm);

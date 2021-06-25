@@ -1,7 +1,7 @@
-public class Cmyk extends Cor{
+public class CorCMYK extends Cor{
     private int black;
     
-    public Cmyk(int cyan, int magenta, int yellow, int black) {       
+    public CorCMYK(int cyan, int magenta, int yellow, int black) {       
         super(cyan, magenta, yellow);     
         this.setBlack(black);
     }
@@ -65,7 +65,7 @@ public class Cmyk extends Cor{
         return (int)(this.getBlack() * 255 / 100);
     }
     
-    @Override
+    //@Override
     public String toString() {
         return "Cyan: " + this.getCyan() + "\nMagenta: " + this.getMagenta() + "\nYellow: " + this.getYellow() + "\nBlack: " + this.getBlack() + "\nLuminosidade: " + this.getLuminosidade();
     }
