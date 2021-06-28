@@ -1,4 +1,6 @@
-public abstract class Cor{
+public class Cor extends Object{    
+    
+    public static Cor INICIALIZAR = new Cor(0, 0, 0);
     
     protected int uplaUm;    
     protected int uplaDois;    
@@ -10,23 +12,31 @@ public abstract class Cor{
         this.setUplaTres(uplaTres);
     }
      
-    public abstract int tratarUplaUm(int uplaUm);
-    public abstract int tratarUplaDois(int uplaDois);
-    public abstract int tratarUplaTres(int uplatres);
-    public abstract int getLuminosidade();
-    
-    private void setUplaUm(int uplaUm) {
-        uplaUm = tratarUplaUm(uplaUm);
+    public void setUplaUm(int uplaUm) {
         this.uplaUm = uplaUm;
     }
 
-    private void setUplaDois(int uplaDois) {
-        uplaDois = tratarUplaDois(uplaDois);
+    public void setUplaDois(int uplaDois) {
         this.uplaDois = uplaDois;
     }
     
-    private void setUplaTres(int uplaTres) {
-        uplaTres = tratarUplaTres(uplaTres);
+    public void setUplaTres(int uplaTres) {
         this.uplaTres = uplaTres;
+    }
+
+    public int getUplaUm() {
+        return this.uplaUm;
+    }
+
+    public int getUplaDois() {
+        return this.uplaDois;
+    }
+
+    public int getUplaTres() {
+        return this.uplaTres;
+    }
+
+    public int getLuminosidade() {
+        return (int)(this.getUplaUm() * 0.3 +this.getUplaDois() * 0.59 + this.getUplaTres() * 0.11);
     }
 }
