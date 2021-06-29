@@ -6,15 +6,13 @@ public class Atlas {
         this.atlas = new Imagem[0];
     }    
         
-    public void addImagem(Imagem imagem){
-        if(imagem instanceof ImagemRGB || imagem instanceof ImagemCMYK){
-            Imagem[] novo = new Imagem[this.atlas.length + 1];
-            for(int i = 0; i < this.atlas.length; i++){
-                novo[i] = this.atlas[i];
-            }
-            novo[novo.length - 1] = imagem;
-            this.atlas = novo;
+    public void addImagem(Imagem imagem){        
+        Imagem[] novo = new Imagem[this.atlas.length + 1];
+        for(int i = 0; i < this.atlas.length; i++){
+            novo[i] = this.atlas[i];
         }
+        novo[novo.length - 1] = imagem;
+        this.atlas = novo;        
     } 
     
     public int getAtlasTam(){
