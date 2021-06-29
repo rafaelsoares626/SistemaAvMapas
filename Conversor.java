@@ -9,7 +9,7 @@ public class Conversor {
                 novo.setPixel(iCont, jCont, novaCor);
             }
         }
-	return novo;
+    return novo;
     }
     
 }
