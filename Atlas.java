@@ -7,17 +7,15 @@ public class Atlas {
     }    
         
     public void addImagem(Imagem imagem){
-        Imagem[] novo = new Imagem[this.atlas.length + 1];
-        for(int i = 0; i < this.atlas.length; i++){
-            novo[i] = this.atlas[i];
+        if(imagem instanceof ImagemRGB || imagem instanceof ImagemCMYK){
+            Imagem[] novo = new Imagem[this.atlas.length + 1];
+            for(int i = 0; i < this.atlas.length; i++){
+                novo[i] = this.atlas[i];
+            }
+            novo[novo.length - 1] = imagem;
+            this.atlas = novo;
         }
-        novo[novo.length - 1] = imagem;
-        this.atlas = novo;
     } 
-    
-    /*public Imagem[] getAtlas(){
-        return this.atlas;
-    }*/
     
     public int getAtlasTam(){
         return this.atlas.length;
