@@ -1,12 +1,12 @@
-public class Imagem extends Object{
+public abstract class Imagem extends Object{
         
     public Cor[][] pixel;
     
-    public Imagem(int altura, int largura) {        
+    public Imagem(int altura, int largura, Cor cor) {        
         this.pixel = new Cor[altura][largura];
         for(int i = 0; i < this.pixel.length; i++){
             for(int j = 0; j < this.pixel[i].length; j++){
-                this.pixel[i][j] = Cor.INICIALIZAR;
+                this.pixel[i][j] = cor; //Cor.INICIALIZAR;
             }
         }
     }
@@ -23,9 +23,12 @@ public class Imagem extends Object{
         return this.pixel[altura][largura];
     }    
     
-    public void setPixel(int altura, int largura, Cor pixel) {
+    public abstract void setPixel(int altura, int largura, Cor pixel);
+    
+    /*public void setPixel(int altura, int largura, Cor pixel) {
         this.pixel[altura][largura] = pixel;
-    }
+    }*/
+    
     //@Override
     public String toString(){
         

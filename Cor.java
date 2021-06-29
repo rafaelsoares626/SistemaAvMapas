@@ -1,6 +1,6 @@
-public class Cor extends Object{    
+public abstract class Cor extends Object{    
     
-    public static Cor INICIALIZAR = new Cor(0, 0, 0);
+    //public static Cor INICIALIZAR = new Cor(0, 0, 0);
     
     protected int uplaUm;    
     protected int uplaDois;    
@@ -12,20 +12,11 @@ public class Cor extends Object{
         this.setUplaTres(uplaTres);
     }
     
-    public void setUplaUm(int uplaUm) {        
-        uplaUm = 0; 
-        this.uplaUm = uplaUm;
-    }
+    public abstract void setUplaUm(int uplaUm);
 
-    public void setUplaDois(int uplaDois) {        
-        uplaDois = 0;
-        this.uplaDois = uplaDois;
-    }
+    public abstract void setUplaDois(int uplaDois);
     
-    public void setUplaTres(int uplaTres) {      
-        uplaTres = 0;
-        this.uplaTres = uplaTres;
-    }
+    public abstract void setUplaTres(int uplaTres);
 
     public int getUplaUm() {
         return this.uplaUm;
