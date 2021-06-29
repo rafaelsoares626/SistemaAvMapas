@@ -1,3 +1,4 @@
+
 public class AppAtlas {
     private Atlas atlas1;
     
@@ -11,7 +12,7 @@ public class AppAtlas {
         System.out.println("__________________________________________________");
 
         
-        ImagemRGB imagemRGB1 = new ImagemRGB(3, 5);
+        ImagemRGB imagemRGB1 = new ImagemRGB(3, 5, new CorRGB(0, 0, 0));
         
         CorRGB cor_RGB1 = new CorRGB(-37, 150, 390);
         imagemRGB1.setPixel(0, 0, cor_RGB1);
@@ -31,28 +32,28 @@ public class AppAtlas {
         imagemRGB1.setPixel(2, 4, cor_RGB1);
         this.atlas1.addImagem(imagemRGB1);
         
-        ImagemRGB imagemRGB2 = new ImagemRGB(4, 5);
+        ImagemRGB imagemRGB2 = new ImagemRGB(4, 5, new CorRGB(0, 0, 0));
         this.atlas1.addImagem(imagemRGB2);
             
-        ImagemCMYK imagemCMYK1 = new ImagemCMYK(3, 3);
+        ImagemCMYK imagemCMYK1 = new ImagemCMYK(3, 3, new CorCMYK(0, 0, 0, 0));
         this.atlas1.addImagem(imagemCMYK1);
         
-        ImagemRGB imagemRGB3 = new ImagemRGB(5, 5);
+        ImagemRGB imagemRGB3 = new ImagemRGB(5, 5, new CorRGB(0, 0, 0));
         this.atlas1.addImagem(imagemRGB3);
         
-        ImagemRGB imagemRGB4 = new ImagemRGB(6, 5);
+        ImagemRGB imagemRGB4 = new ImagemRGB(6, 5, new CorRGB(0, 0, 0));
         this.atlas1.addImagem(imagemRGB4);
         
-        ImagemRGB imagemRGB5 = new ImagemRGB(7, 5);
+        ImagemRGB imagemRGB5 = new ImagemRGB(7, 5, new CorRGB(0, 0, 0));
         this.atlas1.addImagem(imagemRGB5);
 
-        ImagemRGB imagemRGB6 = new ImagemRGB(2, 2);
+        ImagemRGB imagemRGB6 = new ImagemRGB(2, 2, new CorRGB(0, 0, 0));
         this.atlas1.addImagem(imagemRGB6);
         
-        ImagemCMYK imagemCMYK2 = new ImagemCMYK(4, 3);
+        ImagemCMYK imagemCMYK2 = new ImagemCMYK(4, 3, new CorCMYK(0, 0, 0, 0));
         this.atlas1.addImagem(imagemCMYK2);
         
-        ImagemCMYK imagemCMYK4 = new ImagemCMYK(3, 5);  
+        ImagemCMYK imagemCMYK4 = new ImagemCMYK(3, 5, new CorCMYK(0, 0, 0, 0));  
         CorCMYK cor_CMYK5 = new CorCMYK(-37, 150, 70, 100);
         CorCMYK cor_CMYK4 = new CorCMYK(-37, 150, 70, 46);
         imagemCMYK4.setPixel(0, 0, cor_CMYK4);
@@ -119,7 +120,7 @@ public class AppAtlas {
         System.out.println("################# Teste Interface ################"); 
         System.out.println("__________________________________________________");
         
-        ImagemCMYK imagemCMYKInterface = new ImagemCMYK(3, 5);  
+        ImagemCMYK imagemCMYKInterface = new ImagemCMYK(3, 5, new CorCMYK(0, 0, 0, 0));  
         CorCMYK cor_CMYK5 = new CorCMYK(-37, 150, 70, 100);
         CorCMYK cor_CMYK4 = new CorCMYK(-37, 150, 70, 46);
         imagemCMYKInterface.setPixel(0, 0, cor_CMYK4);
