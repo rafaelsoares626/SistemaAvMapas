@@ -30,7 +30,5 @@ public abstract class Cor extends Object{
         return this.uplaTres;
     }
 
-    public int getLuminosidade() {
-        return (int)(this.getUplaUm() * 0.3 +this.getUplaDois() * 0.59 + this.getUplaTres() * 0.11);
-    }
+    public abstract int getLuminosidade();
 }

@@ -6,7 +6,7 @@ public abstract class Imagem extends Object{
         this.pixel = new Cor[altura][largura];
         for(int i = 0; i < this.pixel.length; i++){
             for(int j = 0; j < this.pixel[i].length; j++){
-                this.pixel[i][j] = cor; //Cor.INICIALIZAR;
+                this.pixel[i][j] = cor;
             }
         }
     }
@@ -25,11 +25,6 @@ public abstract class Imagem extends Object{
     
     public abstract void setPixel(int altura, int largura, Cor pixel);
     
-    /*public void setPixel(int altura, int largura, Cor pixel) {
-        this.pixel[altura][largura] = pixel;
-    }*/
-    
-    //@Override
     public String toString(){
         
         String s = "";

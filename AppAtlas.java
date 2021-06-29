@@ -1,4 +1,3 @@
-
 public class AppAtlas {
     private Atlas atlas1;
     
@@ -47,7 +46,7 @@ public class AppAtlas {
         ImagemRGB imagemRGB5 = new ImagemRGB(7, 5, new CorRGB(0, 0, 0));
         this.atlas1.addImagem(imagemRGB5);
 
-        ImagemRGB imagemRGB6 = new ImagemRGB(2, 2, new CorRGB(0, 0, 0));
+        ImagemRGB imagemRGB6 = new ImagemRGB(2, 2, new CorRGB(113, 113, 113));
         this.atlas1.addImagem(imagemRGB6);
         
         ImagemCMYK imagemCMYK2 = new ImagemCMYK(4, 3, new CorCMYK(0, 0, 0, 0));

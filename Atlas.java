@@ -64,7 +64,7 @@ public class Atlas {
                 soSimilaresRGB[r] = atlasAux[k];
             }
         }
-        return soSimilaresRGB; //soSimilaresRGB;
+        return soSimilaresRGB;
     }
     
     public Imagem[] getImagemPorLuminosidade(int red, int green, int blue, double pctMinimo, double limiarSimilaridade){
