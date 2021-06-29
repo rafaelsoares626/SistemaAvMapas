@@ -11,16 +11,19 @@ public class Cor extends Object{
         this.setUplaDois(uplaDois);
         this.setUplaTres(uplaTres);
     }
-     
-    public void setUplaUm(int uplaUm) {
+    
+    public void setUplaUm(int uplaUm) {        
+        uplaUm = 0; 
         this.uplaUm = uplaUm;
     }
 
-    public void setUplaDois(int uplaDois) {
+    public void setUplaDois(int uplaDois) {        
+        uplaDois = 0;
         this.uplaDois = uplaDois;
     }
     
-    public void setUplaTres(int uplaTres) {
+    public void setUplaTres(int uplaTres) {      
+        uplaTres = 0;
         this.uplaTres = uplaTres;
     }
 
