@@ -1,4 +1,5 @@
 public class CorCMYK extends Cor{
+    
     private int black;
     
     public CorCMYK(int cyan, int magenta, int yellow, int black) {       
@@ -53,6 +54,4 @@ public class CorCMYK extends Cor{
     public String toString() {
         return "Cyan: " + this.getUplaUm() + "\nMagenta: " + this.getUplaDois() + "\nYellow: " + this.getUplaTres() + "\nBlack: " + this.getBlack() + "\nLuminosidade: " + this.getLuminosidade();
     }
-    
-
 }

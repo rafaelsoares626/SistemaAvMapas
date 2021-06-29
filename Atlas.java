@@ -29,43 +29,23 @@ public class Atlas {
             s = s + this.atlas[i] + "\n";          
         }
         return s;
-    }   
+    }
     
-    
-    public Imagem[] soRGB(){
-        int qtdRGB = 0;
-        for(int i = 0; i < this.atlas.length; i++){
-            if(this.atlas[i] instanceof ImagemRGB){
-                qtdRGB++;
-            }
-        }
-        
-        Imagem[] soImagemRGB = new Imagem[qtdRGB];
-        int j = -1;
-        for(int i = 0; i < this.atlas.length; i++){
-            if(this.atlas[i] instanceof ImagemRGB){
-                j++;
-                soImagemRGB[j] = this.atlas[i];                
-            }
-        }
-        return soImagemRGB;
-    } 
-
-    public Imagem[] getSimilares(double minimo, double maximo, double pctMinimo, Imagem[] atlasRGB){
+    public Imagem[] getSimilares(double minimo, double maximo, double pctMinimo, Imagem[] atlasAux){
         
         int qtdImagensSimilares = 0;
         int qtdPixelsSimilares = 0;
         
-        for(int k = 0; k < atlasRGB.length; k++){
+        for(int k = 0; k < atlasAux.length; k++){
             qtdPixelsSimilares = 0;
-            for(int i = 0; i < atlasRGB[k].getAltura(); i++){
-                for(int j = 0; j < atlasRGB[k].getLargura(); j++){
-                    if(atlasRGB[k].getPixel(i, j).getLuminosidade() >= minimo &&  atlasRGB[k].getPixel(i, j).getLuminosidade() <= maximo){
+            for(int i = 0; i < atlasAux[k].getAltura(); i++){
+                for(int j = 0; j < atlasAux[k].getLargura(); j++){
+                    if(atlasAux[k].getPixel(i, j).getLuminosidade() >= minimo &&  atlasAux[k].getPixel(i, j).getLuminosidade() <= maximo){
                         qtdPixelsSimilares++;
                     }
                 }
             }
-            double areaImagem = (double)(atlasRGB[k].getAltura() * atlasRGB[k].getLargura());
+            double areaImagem = (double)(atlasAux[k].getAltura() * atlasAux[k].getLargura());
             if(qtdPixelsSimilares/areaImagem >= pctMinimo){
                 qtdImagensSimilares++;
             }
@@ -73,19 +53,19 @@ public class Atlas {
         
         int r = -1;
         Imagem[] soSimilaresRGB = new Imagem[qtdImagensSimilares];
-        for(int k = 0; k < atlasRGB.length; k++){
+        for(int k = 0; k < atlasAux.length; k++){
             qtdPixelsSimilares = 0;
-            for(int i = 0; i < atlasRGB[k].getAltura(); i++){
-                for(int j = 0; j < atlasRGB[k].getLargura(); j++){
-                    if(atlasRGB[k].getPixel(i, j).getLuminosidade() >= minimo &&  atlasRGB[k].getPixel(i, j).getLuminosidade() <= maximo){
+            for(int i = 0; i < atlasAux[k].getAltura(); i++){
+                for(int j = 0; j < atlasAux[k].getLargura(); j++){
+                    if(atlasAux[k].getPixel(i, j).getLuminosidade() >= minimo &&  atlasAux[k].getPixel(i, j).getLuminosidade() <= maximo){
                         qtdPixelsSimilares++;
                     }
                 }
             }
-            double areaImagem = (double)(atlasRGB[k].getAltura() * atlasRGB[k].getLargura());
+            double areaImagem = (double)(atlasAux[k].getAltura() * atlasAux[k].getLargura());
             if(qtdPixelsSimilares/areaImagem >= pctMinimo){
                 r++;
-                soSimilaresRGB[r] = atlasRGB[k];
+                soSimilaresRGB[r] = atlasAux[k];
             }
         }
         return soSimilaresRGB; //soSimilaresRGB;
@@ -93,8 +73,8 @@ public class Atlas {
     
     public Imagem[] getImagemPorLuminosidade(int red, int green, int blue, double pctMinimo, double limiarSimilaridade){
         //Filtrando as imagens RGB
-        Imagem[] atlasRGB = this.atlas;
-        atlasRGB = this.soRGB();
+        Imagem[] atlasAux = this.atlas;
+        //atlasRGB = this.soRGB();
         
         //Construindo a cor e calculando a luminosidade
         CorRGB corRGB_parametro = new CorRGB(red, green, blue);
@@ -107,9 +87,9 @@ public class Atlas {
         double maximo = maxLimiar(luminosidade, limiarSimilaridade);
         maximo = tratarMaximo(maximo);
         
-        Imagem[] atlasRGBSimilar = this.getSimilares(minimo, maximo, pctMinimo, atlasRGB);
+        Imagem[] atlasImagensSimilares = this.getSimilares(minimo, maximo, pctMinimo, atlasAux);
         
-        return atlasRGBSimilar;
+        return atlasImagensSimilares;
     }
 
     public double tratarMinimo(double minimo){
@@ -135,9 +115,4 @@ public class Atlas {
         double max = luminosidade + (luminosidade * limiarSimilaridade);
         return max;
     }    
-    
-    
-    
-    
-    
 }

@@ -22,6 +22,10 @@ public class Imagem extends Object{
     public Cor getPixel(int altura, int largura){
         return this.pixel[altura][largura];
     }    
+    
+    public void setPixel(int altura, int largura, Cor pixel) {
+        this.pixel[altura][largura] = pixel;
+    }
     //@Override
     public String toString(){
         
